@@ -10,8 +10,6 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Data
 @Entity
-
-
 public class Funcionario extends Pessoa {
     private LocalDate dtAdmissao;
     private double salario;

@@ -5,22 +5,20 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.time.LocalTime;
-import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 @Entity
-public class Sessao {
+public class Sala {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private LocalTime horario;
-    private String sala;
+    private int numSala;
+    private String tipoSala; // normal, 3d ou vip
     @OneToMany(fetch = FetchType.EAGER)
-    private List<Cliente> clientes;
-
     private Filme filme;
+    @OneToMany
+    private Assento assento;
 
 }

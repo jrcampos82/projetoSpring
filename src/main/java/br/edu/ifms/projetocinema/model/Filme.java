@@ -22,10 +22,11 @@ public class Filme {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotNull
-    @Size(min=10, message = "O título deve ter pelo menos 10 caracteres!")
+    @Size(min = 2, message = "O título deve ter pelo menos 10 caracteres!")
     private String titulo;
     private LocalTime duracao;
     private String genero;
     private int classificacao; // 0 free e 5 adulto
+
 
 }
