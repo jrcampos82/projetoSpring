@@ -28,5 +28,4 @@ public class Filme {
     private String genero;
     private int classificacao; // 0 free e 5 adulto
 
-
 }
