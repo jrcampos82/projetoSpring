@@ -26,7 +26,7 @@ public class ProjetocinemaApplication {
                         filme.save(f);
                     });
         };
-        //filme.findAll().forEach(System.out::println); jdk9
+        //filme.findAll().forEach(System.out::println);
 
     }
 

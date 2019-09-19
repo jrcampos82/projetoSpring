@@ -20,7 +20,7 @@ public class Sessao {
     private String sala;
     @OneToMany(fetch = FetchType.EAGER)
     private List<Cliente> clientes;
-
+    @OneToOne
     private Filme filme;
 
 }

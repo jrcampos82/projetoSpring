@@ -12,6 +12,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Collection;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/filme")
 public class FilmeController {
