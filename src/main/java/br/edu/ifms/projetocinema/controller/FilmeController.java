@@ -12,7 +12,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Collection;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/filme")
 public class FilmeController {
@@ -40,6 +40,7 @@ public class FilmeController {
     @PutMapping("/upd-filme/{id1}")
     ResponseEntity<Filme> update(@Valid @RequestBody Filme filme) {
         Filme f1 = repository.save(filme);
+        log.info("adicionando filme", "erro adicionando filme");
         return ResponseEntity.ok().build();
 
     }
@@ -47,6 +48,7 @@ public class FilmeController {
     @DeleteMapping("/del-filme/{id1}")
     ResponseEntity<Filme> deleteFilme(@PathVariable Long id1) {
         repository.deleteById(id1);
+        log.info("Deletando filme...");
         return ResponseEntity.ok().build();
 
     }
